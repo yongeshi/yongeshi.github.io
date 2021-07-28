@@ -7,20 +7,33 @@
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <!-- Helps show the start/end of where the text changes font color from gray/dark greenyellow to white/greenyellow during scroll (comment out when deployed) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
     <div class="portfolio-container">
         <div id="website-title">
-            <h1>Welcome to my Portfolio</h1>
+            <h1>Scroll & Explore</h1>
         </div>
 
         <div id="website-portfolio-description">
-            <h1>Yong Shin. I'm a ...</h1>
+            <img id=my-pic src="images/thumb_2.jpg" alt="USC Village">    <!-- WHEN I UNCOMMENT THIS AND REFRESH NEAR THE PIC, WELCOME TITLE APPEARS FOR A SECOND WHY? *****-->
+            <div id="my-name">Yong Shin</div>
+            <h2>I build interactive websites that work seamlessly across all devices, with a focus on journey, user engagement and lead generation. <br><br>
+                Aspiring Software Engineer, Web Developer. Curious about all-things-programming. Loves to be challenged & explore/tinker with ideas that seem great at the time.
+            </h2>
         </div>
         
+        <h1 class="section-title">Projects</h1>
+
         <div class="card">
             <div class="card-header">WEBSITE</div>
             <div class="card-title">RPG Game</div>
@@ -30,7 +43,6 @@
                 <i class="card-pic">image</i>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header">WEBSITE</div>
             <div class="card-title">In Ur Area</div>
@@ -40,7 +52,56 @@
             </div>
         </div>
     </div>
+    
     <!-- <script src="main.js"></script> -->
 </body>
+
+<!-- Changes font color from gray/dark greenyellow to white/greenyellow during scroll (looks like fade in/out) -->
+<script>
+const headers = gsap.utils.toArray('#website-title h1');
+
+headers.forEach(text => {
+gsap.to(text, { 
+    color: 'greenyellow', duration: 0.2,
+    scrollTrigger: {
+      trigger: text,
+      start: 'top 70%',
+      end: 'top 40px',
+      toggleActions: "play reverse play reverse",
+      markers: true
+    }
+  })
+})
+
+const headers2 = gsap.utils.toArray('.section-title');
+
+headers2.forEach(text => {
+gsap.to(text, { 
+    color: 'greenyellow', duration: 0.2,
+    scrollTrigger: {
+      trigger: text,
+      start: 'top 70%',
+      end: 'top 170px',
+      toggleActions: "play reverse play reverse",
+      markers: true
+    }
+  })
+})
+
+const headers3 = gsap.utils.toArray('h2');
+
+headers3.forEach(text => {
+gsap.to(text, { 
+    color: 'white', duration: 0.2,
+    scrollTrigger: {
+      trigger: text,
+      start: 'top 70%',
+      end: 'top 170px',
+      toggleActions: "play reverse play reverse",
+      markers: true
+    }
+  })
+})
+</script>
 
 </html>
