@@ -1,0 +1,84 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #000;
+    font-family: "Space Mono", sans-serif;
+    color: #fcf7f0;
+    font-size: 14px;
+    /* line-height: 20px; */
+}
+
+.portfolio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;       /* Rotate Axis */
+    /* justify-content: space-around; */
+}
+
+#website-title, #website-portfolio-description {
+    width: 80%;                 /* Set width of cards */
+    max-width: 1000px;
+    display: flex;                /* Children use Flexbox */
+    flex-direction: column;       /* Rotate Axis */
+    overflow: hidden;             /* Fixes the corners */
+    /* margin: 0px;                  Add space between cards */
+    padding: 30px 20px 30px 0px;     /* top right bottom left */
+}
+
+.card {
+    width: 80%;                 /* Set width of cards */
+    max-width: 1000px;
+    display: flex;                /* Children use Flexbox */
+    flex-direction: column;       /* Rotate Axis */
+    border: 2px solid white;    /* Set up Border */
+    border-radius: 10px;           /* Slightly Curve edges */
+    overflow: hidden;             /* Fixes the corners */
+    margin: 20px;                  /* Add space between cards */
+    padding: 30px 0px 30px 25px;     /* top right bottom left */
+}
+  
+.card-header {
+    color: gray;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-title {
+    color: greenyellow;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.card-body {
+    display: flex;              /* Children use Flexbox */
+    flex-direction: row;        /* Rotate Axis to Vertical */
+    /* justify-content: center;    Group Children in Center */
+    /* align-items: center;        Group Children in Center (on cross axis) */
+    /* padding: 15px 0;             */
+    /* Add padding to the top/bottom */
+    /* justify-content: space-between; */
+}
+
+.card-description {
+    color: white;
+    font-size: 20px;
+    width: 50%;
+    /* text-align: left; */
+}
+
+.card-pic {
+    font-size: 36px;
+    color: white;
+}
+/* @media(max-width: 991px) {
+    .tag {
+        width: 50%;
+    }
+}
+@media(max-width: 767px) {
+    .tag {
+        width: 100%;
+    }
+} */
