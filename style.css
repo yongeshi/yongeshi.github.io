@@ -81,8 +81,8 @@ html, body {
     height: 70vh;          
     display: flex;                /* Children use Flexbox */
     flex-direction: column;       /* Rotate Axis */
-    border: 2px solid white;    /* Set up Border */
-    border-radius: 15px;           /* Slightly Curve edges */
+    border: 2px solid white;   
+    border-radius: 15px;         
     overflow: hidden;             /* Fixes the corners */
     margin: 105px;                  /* Add space between cards */
     padding: 35px 0px 35px 30px;     /* top right bottom left */
@@ -117,6 +117,24 @@ html, body {
     color: white;
     font-size: 20px;
     /* text-align: left; */
+}
+
+/* Gets rid of the button's hyperlink color */
+a {
+    text-decoration: none;
+}
+
+button {
+    display: block;
+    width: 40%;
+    margin-top: 40%;
+    padding: 18px;
+    font-size: 22px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;    
+    cursor: pointer;
 }
 
 .card-pic {
