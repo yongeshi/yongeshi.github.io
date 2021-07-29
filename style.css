@@ -122,6 +122,7 @@ html, body {
 /* Gets rid of the button's hyperlink color */
 a {
     text-decoration: none;
+    color: white;
 }
 
 button {
@@ -133,7 +134,7 @@ button {
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
-    border-radius: 5px;    
+    border-radius: 5px;  
     cursor: pointer;
 }
 
@@ -177,8 +178,26 @@ button {
     transition: 0.5s ease-in-out;
 }
 
+.laptop-screen {
+    position: absolute;
+    top: 22.5px;
+    left: 64px;
+    width: 42%;  
+    opacity: 0; 
+    transition: 0.5s ease-in-out;
+}
+
+.laptop-screen2 {
+    position: absolute;
+    top: 22.5px;
+    left: 210px;
+    width: 50%;  
+    opacity: 0; 
+    transition: 0.5s ease-in-out;
+}
+
 /* Change laptop from black and white to purple on hover */
-.card:hover .laptop-top-purple, .card:hover .laptop-bottom-purple {
+.card:hover .laptop-top-purple, .card:hover .laptop-bottom-purple, .card:hover .laptop-screen, .card:hover .laptop-screen2 {
     opacity: 1 !important;
 }
 
