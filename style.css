@@ -21,18 +21,19 @@ html, body {
 #website-title {
     width: 80%;  
     max-width: 1000px; 
-    height: 100vh;          
+    height: 90vh;          
     text-align: center;
     /* color:#588218; lighter color******* */
-    color:#466813;
+    color: #4c1ca4;
     font-size: 80px;
+    font-family: 'Odibee Sans', cursive;
     padding: 70px 20px 30px 0px;     /* top right bottom left */
 }
 
 #website-portfolio-description {
     width: 80%;                 
     max-width: 1000px;
-    height: 80vh;          
+    height: 93vh;          
     display: flex;                /* Children use Flexbox */
     flex-direction: column;       /* Rotate Axis */
     overflow: hidden;             /* Fixes the corners */
@@ -42,30 +43,52 @@ html, body {
 
 #my-pic {
     width: 20%;       
-    margin-bottom: 50px;          
+    margin-bottom: 50px;   
+    border-radius: 15px;          
+}
+
+#my-name {
+    color: lightgray;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#my-occupation {
+    max-width: 780px;
+    margin-left: -2px;
+    font-size: 45px;
+    line-height: 65px;
+    font-weight: 400;
+
+    /* Making a gradient text */
+    background-image: linear-gradient(116deg, #9660f9, #40f384);    /* declare the gradient as the background image */
+    -webkit-text-fill-color: transparent;                               /* make the text transparent to reveal the background */
+    background-clip: text;                                              /* clip the background image to the text */
+    -webkit-background-clip: text;
 }
 
 .section-title {
-    color:#466813;
-    /* color:#588218; lighter color******* */
+    color: #4c1ca4    ;
+    /* color:#588218; lighter greenyellow color******* */
     margin-right: 52%;
+    margin-bottom: 1%;
     font-size: 60px;
 }
 
 .card {
     width: 80%;                 /* Set width of cards */
-    max-width: 1000px;
+    max-width: 990px;
     height: 70vh;          
     display: flex;                /* Children use Flexbox */
     flex-direction: column;       /* Rotate Axis */
     border: 2px solid white;    /* Set up Border */
-    border-radius: 10px;           /* Slightly Curve edges */
+    border-radius: 15px;           /* Slightly Curve edges */
     overflow: hidden;             /* Fixes the corners */
     margin: 105px;                  /* Add space between cards */
-    padding: 30px 0px 30px 25px;     /* top right bottom left */
+    padding: 35px 0px 35px 30px;     /* top right bottom left */
 }
   
-.card-header, #my-name {
+.card-header {
     color: gray;
     font-size: 20px;
     font-weight: 600;
@@ -75,6 +98,8 @@ html, body {
     color: greenyellow;
     font-size: 50px;
     font-weight: 600;
+    margin-top: 10px;   
+    margin-bottom: 10px;             
 }
 
 .card-body {
@@ -95,9 +120,59 @@ html, body {
 }
 
 .card-pic {
-    color: white;
-    font-size: 36px;
+    display: flex;              
+    flex-direction: column;  
+    position: relative;
+    top: 0;
+    left: 0; 
 }
+
+/* Laptop screens - show black and white version, hide purple version */
+.laptop-top-bw {
+    position: absolute;
+    top: 0px;
+    left: 51px;
+    width: 99%;  
+    opacity: 1; 
+    transition: 0.5s ease-in-out;
+}
+
+.laptop-bottom-bw {
+    position: absolute;
+    top: 224px;
+    left: 0px;
+    width: 129%;  
+    opacity: 1; 
+    transition: 0.5s ease-in-out;
+}
+
+.laptop-top-purple {
+    width: 99%;  
+    margin-left: 51px;
+    opacity: 0; 
+    transition: 0.5s ease-in-out;
+}
+
+.laptop-bottom-purple {
+    width: 129%;  
+    opacity: 0; 
+    transition: 0.5s ease-in-out;
+}
+
+/* Change laptop from black and white to purple on hover */
+.card:hover .laptop-top-purple, .card:hover .laptop-bottom-purple {
+    opacity: 1 !important;
+}
+
+.card:hover .laptop-top-bw, .card:hover .laptop-bottom-bw {
+    opacity: 0 !important;
+}
+
+/* Purple glow around the card on hover */
+.card:hover {
+    box-shadow: 0 0 86px 30px rgb(112 20 210 / 50%);
+}
+
 /* @media(max-width: 991px) {
     .tag {
         width: 50%;

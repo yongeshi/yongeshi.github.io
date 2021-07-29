@@ -7,27 +7,34 @@
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 
+    <!-- Website Title Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    
+    <!-- Body Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
-    <!-- Helps show the start/end of where the text changes font color from gray/dark greenyellow to white/greenyellow during scroll (comment out when deployed) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+
 </head>
 
 <body>
     <div class="portfolio-container">
         <div id="website-title">
-            <h1>Scroll & Explore</h1>
+            <h1>My Website</h1>
         </div>
 
         <div id="website-portfolio-description">
-            <img id=my-pic src="images/thumb_2.jpg" alt="USC Village">    <!-- WHEN I UNCOMMENT THIS AND REFRESH NEAR THE PIC, WELCOME TITLE APPEARS FOR A SECOND WHY? *****-->
+            <img id=my-pic src="images/profile-pic1.jpg" alt="Profile Picture">    <!-- WHEN I UNCOMMENT ALL PICS? AND REFRESH NEAR THE PIC, WEBSITE TITLE APPEARS FOR A SECOND WHY? FONT seems to be loading slow or maybe images are loading slow? how to make it wait until everything is loaded*****-->
             <div id="my-name">Yong Shin</div>
-            <h2>I build interactive websites that work seamlessly across all devices, with a focus on journey, user engagement and lead generation. <br><br>
+            <div id="my-occupation">Student Completing B.S. in CS At USC</div>
+            <h2>I built an interactive portfolio website that works seamlessly across all devices, with a focus on user engagement with a unique style. <br><br>
                 Aspiring Software Engineer, Web Developer. Curious about all-things-programming. Loves to be challenged & explore/tinker with ideas that seem great at the time.
             </h2>
         </div>
@@ -38,25 +45,34 @@
             <div class="card-header">WEBSITE</div>
             <div class="card-title">RPG Game</div>
             <div class="card-body">
-                <div class="card-description">The Innovation Collaboration Group - a PropTech collective providing new 
-                    solutions for the property industry.</div>
-                <i class="card-pic">image</i>
+                <div class="card-description">Ice cream is a frozen dairy dessert obtained by freezing the ice cream mix with continuous agitation. It contains milk products, 
+                    sweetening materials, stabilizers, colors, flavors, and egg products. Ice cream had its origins in Europe and was introduced later in the United States where it developed into an industry.</div>
+                <div class="card-pic">
+                    <img class="laptop-top-bw" src="images/laptop-top-bw.svg" alt="Laptop Screen" loading="lazy">   
+                    <img class="laptop-bottom-bw" src="images/laptop-bottom-bw.svg" alt="Laptop Keyboard" loading="lazy"> 
+                    <img class="laptop-top-purple" src="images/laptop-top-purple.svg" alt="Laptop Screen" loading="lazy">   
+                    <img class="laptop-bottom-purple" src="images/laptop-bottom-purple.svg" alt="Laptop Keyboard" loading="lazy">    
+                </div>
             </div>
         </div>
         <div class="card">
             <div class="card-header">WEBSITE</div>
             <div class="card-title">In Ur Area</div>
             <div class="card-body">
-                <div class="card-description">Hot Tub</div>
-                <i class="card-pic">image</i>
+                <div class="card-description">Ice cream is a frozen dairy dessert obtained by freezing the ice cream mix with continuous agitation. It contains milk products, 
+                    sweetening materials, stabilizers, colors, flavors, and egg products. Ice cream had its origins in Europe and was introduced later in the United States where it developed into an industry.</div>
+                <div class="card-pic">
+                    <img class="laptop-top-bw" src="images/laptop-top-bw.svg" alt="Laptop Screen" loading="lazy">   
+                    <img class="laptop-bottom-bw" src="images/laptop-bottom-bw.svg" alt="Laptop Keyboard" loading="lazy"> 
+                    <img class="laptop-top-purple" src="images/laptop-top-purple.svg" alt="Laptop Screen" loading="lazy">   
+                    <img class="laptop-bottom-purple" src="images/laptop-bottom-purple.svg" alt="Laptop Keyboard" loading="lazy">    
+                </div>
             </div>
         </div>
     </div>
-    
-    <!-- <script src="main.js"></script> -->
 </body>
 
-<!-- Changes font color from gray/dark greenyellow to white/greenyellow during scroll (looks like fade in/out) -->
+<!-- Changes text font color from gray/dark greenyellow to white/greenyellow when scrolling into view (makes text look like it's fading in/out) -->
 <script>
 const headers = gsap.utils.toArray('#website-title h1');
 
@@ -68,7 +84,7 @@ gsap.to(text, {
       start: 'top 70%',
       end: 'top 40px',
       toggleActions: "play reverse play reverse",
-      markers: true
+    //   markers: true       Helps show the start/end of where the text changes font color from gray/dark greenyellow to white/greenyellow during scroll (comment out when deployed)
     }
   })
 })
@@ -80,10 +96,10 @@ gsap.to(text, {
     color: 'greenyellow', duration: 0.2,
     scrollTrigger: {
       trigger: text,
-      start: 'top 70%',
-      end: 'top 170px',
+      start: 'top 60%',
+      end: 'top 130px',
       toggleActions: "play reverse play reverse",
-      markers: true
+    //   markers: true       Helps show the start/end of where the text changes font color from gray/dark greenyellow to white/greenyellow during scroll (comment out when deployed)
     }
   })
 })
@@ -98,7 +114,7 @@ gsap.to(text, {
       start: 'top 70%',
       end: 'top 170px',
       toggleActions: "play reverse play reverse",
-      markers: true
+    //   markers: true       Helps show the start/end of where the text changes font color from gray/dark greenyellow to white/greenyellow during scroll (comment out when deployed)
     }
   })
 })
