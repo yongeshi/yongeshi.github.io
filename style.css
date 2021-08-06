@@ -28,6 +28,7 @@ html, body {
     padding: 15% 20px 1.5% 0px;     /* top right bottom left */
 }
 
+/* Section about Me */
 #website-portfolio-description {
     width: 80%;                 
     max-width: 1000px;
@@ -64,6 +65,7 @@ html, body {
     -webkit-background-clip: text;
 }
 
+/* Project Section */
 .section-title {
     /* color: #4c1ca4    ; */
     color:#588218;
@@ -115,7 +117,7 @@ html, body {
     /* text-align: left; */
 }
 
-/* Gets rid of the button's hyperlink color */
+/* Gets rid of Launch Github button's hyperlink color */
 a {
     text-decoration: none;
     color: white;
@@ -143,7 +145,7 @@ button {
     left: 0; 
 }
 
-/* Laptop screens - show black and white version, hide purple version */
+/* Laptop images - show black and white version, hide purple version */
 .laptop-top-bw {
     position: absolute;
     top: 0px;
@@ -175,26 +177,34 @@ button {
     transition: 0.5s ease-in-out;
 }
 
+/* Laptop screen images for each project */
 .laptop-screen {
     position: absolute;
     top: 22.5px;
     left: 64px;
-    width: 42%;  
+    height: 61%;
+    width: 91.5%;
     opacity: 0; 
     transition: 0.5s ease-in-out;
 }
 
-.laptop-screen2 {
+#laptop-project-one-screen {
+    width: 42%;  
+}
+
+#laptop-project-one-screen2 {
     position: absolute;
     top: 22.5px;
     left: 210px;
-    width: 50%;  
+    width: 50%;
+    height: 61%;  
     opacity: 0; 
     transition: 0.5s ease-in-out;
 }
 
-/* On hover, change laptop from black and white to purple */
-.card:hover .laptop-top-purple, .card:hover .laptop-bottom-purple, .card:hover .laptop-screen, .card:hover .laptop-screen2 {
+/* On hover, change laptop from black and white to purple and display project images */
+.card:hover .laptop-top-purple, .card:hover .laptop-bottom-purple, 
+.card:hover .laptop-screen, .card:hover #laptop-project-one-screen2 {
     opacity: 1 !important;
 }
 
@@ -206,6 +216,7 @@ button {
 .card:hover {
     box-shadow: 0 0 86px 50px rgb(112 20 210 / 50%);
 }
+
 
 /* @media(max-width: 991px) {
     .tag {
