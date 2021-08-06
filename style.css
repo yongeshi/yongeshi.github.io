@@ -6,7 +6,6 @@ html, body {
     font-family: "Space Mono", sans-serif;
     color: gray;
     font-size: 14px;
-    /* line-height: 20px; */
 }
 
 .portfolio-container {
@@ -15,7 +14,6 @@ html, body {
     justify-content: center;
     flex-direction: column;       /* Rotate Axis */
     margin-bottom: 80px;
-    /* justify-content: space-around; */
 }
 
 #website-title {
@@ -23,21 +21,20 @@ html, body {
     max-width: 1000px; 
     height: 90vh;          
     text-align: center;
-    /* color:#588218; lighter color******* */
-    color: #4c1ca4;
+    color:#588218;
+    /* color: #4c1ca4; */
     font-size: 80px;
     font-family: 'Odibee Sans', cursive;
-    padding: 70px 20px 30px 0px;     /* top right bottom left */
+    padding: 15% 20px 1.5% 0px;     /* top right bottom left */
 }
 
 #website-portfolio-description {
     width: 80%;                 
     max-width: 1000px;
     height: 93vh;          
-    display: flex;                /* Children use Flexbox */
-    flex-direction: column;       /* Rotate Axis */
-    overflow: hidden;             /* Fixes the corners */
-    /* margin: 0px;                  Add space between cards */
+    display: flex;               
+    flex-direction: column;      
+    overflow: hidden;             
     padding: 50px 20px 0px 0px;     /* top right bottom left */
 }
 
@@ -68,9 +65,10 @@ html, body {
 }
 
 .section-title {
-    color: #4c1ca4    ;
-    /* color:#588218; lighter greenyellow color******* */
-    margin-right: 52%;
+    /* color: #4c1ca4    ; */
+    color:#588218;
+    width: 80%;
+    max-width: 1020px;
     margin-bottom: 1%;
     font-size: 60px;
 }
@@ -78,14 +76,16 @@ html, body {
 .card {
     width: 80%;                 /* Set width of cards */
     max-width: 990px;
+    max-height: 650px;
     height: 70vh;          
-    display: flex;                /* Children use Flexbox */
-    flex-direction: column;       /* Rotate Axis */
+    display: flex;              
+    flex-direction: column;     
     border: 2px solid white;   
     border-radius: 15px;         
-    overflow: hidden;             /* Fixes the corners */
-    margin: 105px;                  /* Add space between cards */
+    overflow: hidden;          
+    margin: 7%;                  /* Add space between cards */
     padding: 35px 0px 35px 30px;     /* top right bottom left */
+    position: relative;
 }
   
 .card-header {
@@ -103,17 +103,13 @@ html, body {
 }
 
 .card-body {
-    display: flex;              /* Children use Flexbox */
+    display: flex;             
     flex-direction: row;        /* Rotate Axis to Vertical */
-    /* justify-content: center;    Group Children in Center */
-    /* align-items: center;        Group Children in Center (on cross axis) */
-    /* padding: 15px 0;             */
-    /* Add padding to the top/bottom */
-    /* justify-content: space-between; */
 }
 
 .card-description {
-    width: 50%;
+    width: 45%;
+    padding-right: 5%;
     color: white;
     font-size: 20px;
     /* text-align: left; */
@@ -127,8 +123,9 @@ a {
 
 button {
     display: block;
-    width: 40%;
-    margin-top: 40%;
+    /* width: 20%; */
+    position:absolute;
+    bottom:5%;
     padding: 18px;
     font-size: 22px;
     background-color: transparent;
@@ -196,7 +193,7 @@ button {
     transition: 0.5s ease-in-out;
 }
 
-/* Change laptop from black and white to purple on hover */
+/* On hover, change laptop from black and white to purple */
 .card:hover .laptop-top-purple, .card:hover .laptop-bottom-purple, .card:hover .laptop-screen, .card:hover .laptop-screen2 {
     opacity: 1 !important;
 }
@@ -205,9 +202,9 @@ button {
     opacity: 0 !important;
 }
 
-/* Purple glow around the card on hover */
+/* On hover, add purple glow around the card */
 .card:hover {
-    box-shadow: 0 0 86px 30px rgb(112 20 210 / 50%);
+    box-shadow: 0 0 86px 50px rgb(112 20 210 / 50%);
 }
 
 /* @media(max-width: 991px) {
