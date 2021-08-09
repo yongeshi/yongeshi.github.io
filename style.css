@@ -28,6 +28,17 @@ html, body {
     padding: 15% 20px 1.5% 0px;     /* top right bottom left */
 }
 
+/* Scrollbar */
+*::-webkit-scrollbar { width: 12px; }
+.card-description::-webkit-scrollbar { width: 0px; }
+*::-webkit-scrollbar-track { background: black; }
+*::-webkit-scrollbar-thumb {
+    background-color: greenyellow; /* TODO: Should I make scrollbar #F0F0F0???**** */
+    border-radius: 20px;
+    border: 3px solid greenyellow;
+}
+
+
 /* Section about Me */
 #website-portfolio-description {
     width: 80%;                 
@@ -113,11 +124,13 @@ html, body {
     width: 40%;
     padding-right: 1%;
     color: white;
-    font-size: 20px;
-    /* text-align: left; */
+    font-size: 150%;
+    max-height: 400px;
+    text-overflow: ellipsis;    /* TODO: not working */
+    overflow: auto;
 }
 
-/* Gets rid of Launch Github button's hyperlink color */
+/* Removes Launch Github button's hyperlink color */
 a {
     text-decoration: none;
     color: white;
@@ -190,11 +203,11 @@ button {
     transition: 0.5s ease-in-out;
 }
 
-#laptop-project-one-screen {
+.laptop-screen-one {
     width: 54%;  
 }
 
-#laptop-project-one-screen2 {
+.laptop-screen-two {
     position: absolute;
     top: 29px;
     left: 275px;
@@ -207,7 +220,7 @@ button {
 
 /* On hover, change laptop from black and white to purple and display project images */
 .card:hover .laptop-top-purple, .card:hover .laptop-bottom-purple, 
-.card:hover .laptop-screen, .card:hover #laptop-project-one-screen2 {
+.card:hover .laptop-screen, .card:hover .laptop-screen-two {
     opacity: 1 !important;
 }
 
@@ -221,13 +234,39 @@ button {
 }
 
 
-/* @media(max-width: 991px) {
-    .tag {
-        width: 50%;
+@media(max-width: 991px) {      /* Scaling for tablet sizes */
+    #website-title {
+        font-size: 70px;
+    }
+    .section-title {
+        font-size: 55px;
+    }
+    .card-title {
+        font-size: 45px;           
+    }
+    .card-description {
+        font-size: 2.2vw;
+        max-height: 360px;
+    }
+    .card {
+        max-height: 600px;
     }
 }
-@media(max-width: 767px) {
-    .tag {
-        width: 100%;
+@media(max-width: 767px) {      /* Scaling for phone sizes */
+    #website-title {
+        font-size: 60px;
     }
-} */
+    .section-title {
+        font-size: 48px;
+    }
+    .card-title {
+        font-size: 33px;           
+    }
+    .card-description {
+        font-size: 2.5vw;
+        max-height: 300px;
+    }
+    .card {
+        max-height: 500px;
+    }
+}
