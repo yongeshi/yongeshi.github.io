@@ -121,7 +121,7 @@ html, body {
 }
 
 .card-description {
-    width: 40%;
+    width: 39%;
     padding-right: 1%;
     color: white;
     font-size: 150%;
@@ -153,13 +153,84 @@ button {
 .card-pic {
     display: flex;              
     flex-direction: column;  
+    width: 58%;
+    margin-left: 1%;
+}
+
+.card-pic-top, .card-pic-bottom {
+    /* width: 100%; */
     position: relative;
-    top: 0;
-    left: 0; 
 }
 
 /* Laptop images - show black and white version, hide purple version */
 .laptop-top-bw {
+    position: absolute;
+    left: 10.75%;
+    width: 78%;  
+    opacity: 1; 
+    transition: 0.5s ease-in-out;
+}
+
+.laptop-top-purple {
+    /* position: absolute; */
+    width: 78%;  
+    margin-left: 10.75%;
+    margin-bottom: -.88%;
+    opacity: 0; 
+    transition: 0.5s ease-in-out;
+}
+
+.laptop-bottom-bw {
+    position: absolute;
+    width: 100%;  
+    top: 0px;
+    opacity: 1; 
+    transition: 0.5s ease-in-out;
+}
+
+.laptop-bottom-purple {
+    /* position: absolute; */
+    width: 100%;  
+    opacity: 0; 
+    transition: 0.5s ease-in-out;
+}
+
+/* Laptop screen images for each project */
+.laptop-screen {
+    position: absolute;
+    top: 9.8%;
+    left: 13.75%;
+    height: 86.5%;
+    width: 72.3%;
+    opacity: 0; 
+    transition: 0.5s ease-in-out;
+}
+
+.laptop-screen-one {
+    width: 34.5%;  
+}
+
+.laptop-screen-two {
+    position: absolute;
+    top: 10%;
+    left: 48.5%;
+    width: 36.75%;
+    height: 86.2%;
+    opacity: 0; 
+    transition: 0.5s ease-in-out;
+    border-left: 3px solid white;
+}
+
+/* .card-pic {
+    display: flex;              
+    flex-direction: column;  
+    position: relative;
+    top: 0;
+    left: 0; 
+} */
+
+/* Laptop images - show black and white version, hide purple version */
+/* .laptop-top-bw {
     position: absolute;
     top: 0px;
     left: 17%;
@@ -178,7 +249,6 @@ button {
 }
 
 .laptop-top-purple {
-    /* position: absolute; */
     width: 124%;  
     padding-left: 62px;
     opacity: 0; 
@@ -186,14 +256,13 @@ button {
 }
 
 .laptop-bottom-purple {
-    /* position: absolute; */
     width: 159%;  
     opacity: 0; 
     transition: 0.5s ease-in-out;
-}
+} */
 
 /* Laptop screen images for each project */
-.laptop-screen {
+/* .laptop-screen {
     position: absolute;
     top: 28.5px;
     left: 78.5px;
@@ -216,7 +285,7 @@ button {
     opacity: 0; 
     transition: 0.5s ease-in-out;
     border-left: 3px solid white;
-}
+} */
 
 /* On hover, change laptop from black and white to purple and display project images */
 .card:hover .laptop-top-purple, .card:hover .laptop-bottom-purple, 
