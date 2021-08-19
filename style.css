@@ -118,6 +118,7 @@ html, body {
 .card-body {
     display: flex;             
     flex-direction: row;        /* Rotate Axis to Vertical */
+    height: 45vh; 
 }
 
 .card-description {
@@ -125,7 +126,6 @@ html, body {
     padding-right: 1%;
     color: white;
     font-size: 150%;
-    max-height: 45vh;
     text-overflow: ellipsis;    /* TODO: not working */
     overflow: auto;
 }
