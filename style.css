@@ -125,7 +125,7 @@ html, body {
     padding-right: 1%;
     color: white;
     font-size: 150%;
-    max-height: 400px;
+    max-height: 45vh;
     text-overflow: ellipsis;    /* TODO: not working */
     overflow: auto;
 }
