@@ -241,6 +241,9 @@ button {
     #website-title {
         font-size: 70px;
     }
+    #my-pic {
+        width: 30%;               
+    }
     .section-title {
         font-size: 55px;
     }
@@ -258,6 +261,9 @@ button {
 @media(max-width: 767px) {      /* Scaling for phone sizes */
     #website-title {
         font-size: 60px;
+    }
+    #my-pic {
+        width: 40%;               
     }
     .section-title {
         font-size: 48px;
