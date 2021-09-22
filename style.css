@@ -51,7 +51,7 @@ html, body {
 }
 
 #my-pic {
-    width: 20%;       
+    width: 15%;       
     margin-bottom: 50px;   
     border-radius: 15px;          
 }
@@ -242,7 +242,7 @@ button {
         font-size: 70px;
     }
     #my-pic {
-        width: 30%;               
+        width: 20%;               
     }
     .section-title {
         font-size: 55px;
@@ -263,7 +263,7 @@ button {
         font-size: 60px;
     }
     #my-pic {
-        width: 40%;               
+        width: 30%;               
     }
     .section-title {
         font-size: 48px;
